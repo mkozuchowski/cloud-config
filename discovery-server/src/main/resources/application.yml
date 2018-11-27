@@ -5,6 +5,8 @@ eureka:
   instance:
     hostname: ${HOST_NAME:localhost}
     prefer-ip-address: true
+  environment: prod
+      
   client:
     register-with-eureka: false
     fetch-registry: false
@@ -14,4 +16,3 @@ eureka:
     enable-self-preservation: false # in case of network error Eureka can have its registry emptied
     wait-time-in-ms-when-sync-empty: 0
     eviction-interval-timer-in-ms: 20000 # defines interval between eviction job executions
-
